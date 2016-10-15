@@ -32,5 +32,5 @@ def readAudio(inputFile):
     """
     fs, samples = wavread(inputFile)
 
-    return samples[50000:50009]
+    return samples[50000:50010]
 
