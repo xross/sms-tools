@@ -25,4 +25,12 @@ def DFT(x):
         The function should return a numpy array of length N
         X (numpy array) = The N point DFT of the input sequence x
     """
-    ## Your code here
+
+    N = len(x)
+    X = np.array([])
+
+    for k in range(N):
+        s = np.exp(1j * 2 * np.pi * k/N * np.arange(N))
+        X = np.append(X, sum(x * np.conjugate(s)))
+
+    return X
